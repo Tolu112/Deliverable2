@@ -15,8 +15,13 @@ class Program
             {
                 Console.Write("\n" + "Person " + i + ", would you like a fountain drink or coffee?: ");
                 string beverage = Console.ReadLine();
-                if (beverage == "coffee" || beverage == "Coffee") { Console.WriteLine("Coffee, got it!"); numberofCoffeeRequests++; }
-                if (beverage == "fountain drink" || beverage == "Fountain Drink" || beverage == "fountain Drink" || beverage == "Fountain drink" || beverage == "fountain" || beverage == "Fountain") { Console.WriteLine("A fountain drink, excellent!"); numberofFountainDrinkRequests++; }
+                if (beverage == "coffee" || beverage == "Coffee" || beverage == "fountain drink" || beverage == "Fountain Drink" || beverage == "fountain Drink" || beverage == "Fountain drink" || beverage == "fountain" || beverage == "Fountain")
+                {
+                    if (beverage == "coffee" || beverage == "Coffee") { Console.WriteLine("Coffee, got it!"); numberofCoffeeRequests++; }
+                    else { Console.WriteLine("A fountain drink, excellent!"); numberofFountainDrinkRequests++; }
+                }
+
+                else { Console.Write("\n" + "Unfortunately, we don't have this beverage." + "\n"); }
             }
             decimal buffet = 9.99m;
             decimal buffetbill = numberofparty * buffet;
